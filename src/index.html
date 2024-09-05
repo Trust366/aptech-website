@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body>
+    <!---------- header  ---------->
+    <header class="bg-white text-black flex justify-between items-start px-5 md:px-16 pt-3">
+      <img src="./assets/images/logo.png" class="w-[12%] h-[12%]" alt="aptech's logo" />
+    
+      <!-- Hamburger Icon for Small Screens -->
+      <button id="menu-btn" class="text-black md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    
+      <!-- Menu Items -->
+      <nav class="hidden md:flex space-x-2 text-gray-800 font-semibold">
+        <a href="#" class="hover:text-red-600">Home</a>
+        <a href="#" class="hover:text-red-600">About</a>
+        <a href="#" class="hover:text-red-600">Courses</a>
+        <a href="#" class="hover:text-red-600">Opportunities</a>
+      </nav>
+    
+      <!-- Mobile Menu  -->
+      <nav id="mobile-menu" class="hidden absolute top-14 left-0 w-full bg-white flex-col items-start p-5 space-y-3 md:hidden">
+        <a href="#" class="block hover:text-red-600">Home</a>
+        <a href="#" class="block hover:text-red-600">About</a>
+        <a href="#" class="block hover:text-red-600">Courses</a>
+        <a href="#" class="block hover:text-red-600">Opportunities</a>
+      </nav>
+    </header>
+    
+    <!-- Script to Toggle Mobile Menu -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+    
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+    
+    <!---------- hero section ---------->
+    <section
+      class="bg-[url('./assets/images/banner.avif')] bg-no-repeat bg-center bg-cover min-h-screen flex justify-center items-center"
+    >
+      <div class="flex justify-center items-center flex-col">
+        <h1 class="text-6xl text-[#ffc300] p-5">Unleash Your Potential</h1>
+        <!-- <p class="text-[#ffc300] py-5 text-lg">
+          Join APTECH OTA to gain hands-on experience, and achieve 100% satisfaction with our top-tier curriculum and cutting-edge facilities.
+        </p> -->
+        <button type="button" value="Join Now" class="bg-white px-6 py-2 m-5 mt-20 rounded text-lg">
+          Join Now
+        </button>
+      </div>
+    </section>
+
+    <!---------- program options ---------->
+    <section class="flex flex-col justify-center items-center">
+      <div class="py-16 text-red-800 text-2xl font-medium">Explore Our Courses</div>
+      
+      <!-- Container for courses -->
+      <div class="flex flex-col md:flex-row w-full justify-around px-4 md:px-10">
+        <!-- Course 1 -->
+        <div class="w-full md:w-[30%] rounded-sm shadow-sm hover:shadow-lg mb-6 md:mb-0">
+          <img src="./assets/images/adse.jpg" alt="" class="w-full h-64 object-cover rounded-sm">
+          <div class="md:pr-10 p-5">
+            <p class="text-lg pb-5 font-medium text-black">Advanced Diploma in Software Engineering</p>
+            <p class="tracking-wide leading-7 text-sm">Our Advanced Diploma in Software Engineering (ADSE) covers software development, programming, and system design. Plus, earn an international BSc degree through our partnerships.</p>
+          </div>
+        </div>
+    
+
+       
+        <!-- Course 2 -->
+        
+        <div class="w-full md:w-[30%] rounded-sm shadow-sm hover:shadow-lg mb-6 md:mb-0">
+          <img src="./assets/images/mern-stack.avif" alt="" class="w-full h-64 object-cover rounded-sm">
+          <div class="md:pr-10 p-5">
+            <p class="text-lg pb-5 font-medium text-black">MERN Stack Development</p>
+            <p class="tracking-wide leading-7 text-sm">Master the MERN Stack—MongoDB, Express.js, React, and Node.js—to build dynamic web apps and become a full-stack developer. This course is ideal for those looking to enter the field of web development.</p>
+          </div>
+        </div>
+    
+        <!-- Course 3 -->
+        <div class="w-full md:w-[30%] rounded-sm shadow-sm hover:shadow-lg">
+          <img src="./assets/images/data-analysis.avif" alt="" class="w-full h-64 object-cover rounded-sm">
+          <div class="md:pr-10 p-5">
+            <p class="text-lg pb-5 font-medium text-black">Data Analysis</p>
+            <p class="tracking-wide leading-7 text-sm">Learn data analysis techniques and tools like Python and Excel to turn data into actionable insights with our Data Analysis course. This course is perfect for anyone looking to pursue a career in business intelligence.</p>
+          </div>
+        </div>
+      </div>
+    
+      <button class="bg-red-900 hover:bg-red-700 text-white rounded-sm p-2 my-10">
+        Browse Our Programs
+      </button>
+    </section>
+    
+    <!---------- benefits of joining us ----------->
+    <section class="bg-zinc-200 flex flex-col items-center justify-center pt-10">
+
+      <div class="text-2xl font-medium text-red-800">Why Choose Us?</div>
+
+      <div class=" px-4 py-10 md:p-10 flex flex-col md:flex-row w-[100%] justify-center items-center">
+        <img src="./assets/images/payment-plan.avif" alt="" class=" md:w-[25%] w-[100%] rounded-sm ">
+        <div class="md:w-[25%] w-[100%] md:pl-10 p-5" >
+          <p class="text-lg pb-5 font-medium text-black">Affordable Payment Plans</p>
+          <p class="tracking-wide leading-7">With flexible installment options, you can invest in your education without worrying about upfront costs, making learning accessible to everyone.</p>
+        </div>
+          
+        
+      </div>
+
+      <div class="p-5 flex flex-col md:flex-row-reverse w-[100%] justify-center items-center">
+        <img src="./assets/images/it-degree.avif" alt="" class=" md:w-[25%]  w-[100%] rounded-sm">
+        <div class="md:w-[25%]  w-[100%] md:pr-10 p-5">
+          <p class="text-lg pb-5 font-medium text-black">Opportunity to Earn an International Degree</p>
+          <p class="tracking-wide leading-7">We offer pathways to earn an internationally recognized degree through our academic partnerships, giving you a competitive edge in the global job market.</p>
+        </div>
+      </div>
+
+      <div class="p-5 flex flex-col md:flex-row w-[100%] justify-center items-center">
+        <img src="./assets/images/comprehensive-curriculum.avif" alt="" class=" md:w-[25%] w-[100%] rounded-sm" >
+        <div class="md:w-[25%] w[100%] md:pl-10 p-5">
+          <p class="text-lg pb-5 font-medium text-black">Comprehensive Curriculum</p>
+          <p class="tracking-wide leading-7">Our courses cover the latest technologies and industry practices, ensuring you are learning in-demand skills that are relevant in today’s job market.</p>
+        </div>
+      </div>
+
+      <div class="p-5 flex  flex-col md:flex-row-reverse w-[100%] justify-center items-center">
+        <img src="./assets/images/collabo-learn.avif" alt="" class=" md:w-[25%] w-[100%] rounded-sm">
+        <div class="md:w-[25%] w[100%] md:pr-10 p-5">
+          <p class="text-lg pb-5 font-medium text-black">Collaborative Learning Environment</p>
+          <p class="tracking-wide leading-7">Engage with a supportive community of fellow learners, participate in group projects, and network with peers who share your passion for tech.</p>
+        </div>
+      </div>
+    </section>
+ 
+    <!---------- contact someone ---------->
+    <section
+      class="bg-zinc-400 text-black p-10 flex justify-center items center "
+    >
+      <div class="text-2xl font-semibold font-serif">
+        Would You Like To Speak With Someone? Call
+        <span class="hover:text-blue-500"><a href="">08037217003</a></span>
+      </div>
+    </section>
+
+    <!---------- faq's ---------->
+    <section class="bg-zinc-100 py-10 flex flex-col justify-center items-center my-5">
+      <div class="tracking-wide text-black text-2xl ">FAQ'S</div>
+    
+      <!-- FAQ Container -->
+      <ul class="max-w-2xl mx-auto mt-20 divide-y rounded-sm w-[70%]">
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>Are there internship opportunities available?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                Yes, we offer internship opportunities for select courses. These internships allow students to gain hands-on experience, build their portfolios, and apply what they've learned in a real-world setting.
+              </p>
+            </article>
+          </details>
+        </li>
+
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>Can I pay in installments?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                Yes, we offer flexible payment plans, allowing you to pay in installments. You can choose a plan that fits your budget and pay over time, ensuring that financial constraints do not hold you back from achieving your educational goals.
+              </p>
+            </article>
+          </details>
+        </li>
+
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>Do I need prior coding experience?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                No prior coding experience is required for all our courses. We offer courses that start from the basics, making them suitable for those new to coding.
+              </p>
+            </article>
+          </details>
+        </li>
+
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>Can I take multiple courses at the same time?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                Yes, you can enroll in multiple courses simultaneously. However, we recommend carefully considering your schedule and workload to ensure you can manage the course requirements effectively.
+              </p>
+            </article>
+          </details>
+        </li>
+
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>Is there a certificate upon completion?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                Yes, upon successful completion of a course, you will receive a certificate that you can use to showcase your new skills to potential employers or add to your professional portfolio.
+
+
+              </p>
+            </article>
+          </details>
+        </li>
+
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>What are the prerequisites?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                The only prerequisite is having a laptop. All other resources and tools will be provided or accessible online.
+              </p>
+            </article>
+          </details>
+        </li>
+
+        <li>
+          <details class="group w-full">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer w-full">
+              <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                   width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+              <span>Do you offer no-code courses?</span>
+            </summary>
+            <!-- Answer Section -->
+            <article class="px-4 pb-4 hidden group-open:block w-full">
+              <p>
+                Yes, we offer no-code courses in UI/UX Design and Data Analysis. These courses are designed to teach essential skills without requiring any coding knowledge.
+              </p>
+            </article>
+          </details>
+        </li>
+
+
+      </ul>
+      
+    </section>
+    <footer class="bg-[#5e5d5d] text-white">
+
+      <!-- content -->
+      <div class="flex md:flex-row flex-col ">
+
+        <div class="md:w-[25%] w-full p-10">
+          <p class="pb-5 text-lg mb-3">Our Vision</p>
+          <p class="tracking-wide ">To be the preferred brand for IT Training Solutions and services and provide “value for money” to the customers. Students at our centre can be assured of 100% satisfaction. </p>
+
+        </div>
+        <div class="p-10 md:w-[25%] w-full">
+          <p class="pb-5 text-lg mb-3">Follow Us</p>
+          <ul class="leading-10">
+            <li>
+          <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+
+            </li>
+            
+          </ul>
+        </div>
+        <div class="flex flex-col p-10 md:w-[25%] w-full">
+          <p class="pb-5 text-lg mb-3">Contact Us</p>
+
+            <p class="pb-5">No 1, Joju bustop, ogbohu plaza, beside Gt bank, Ota</p>
+            <a href="#" class="pb-5">08037217003</a>
+            <p class="font-medium">Email:</p>
+            <a href="#">aptechotacentre@gmail.com</a>
+            <a href="#">aptech.ota@gmail.com</a>
+        
+          
+        </div>
+      </div>
+      <!-- logos -->
+      <div class="flex flex-row justify-center items-center divide-y ">
+        <i class="ri-facebook-fill p-2"></i>  
+        <i class="ri-instagram-line p-2"></i>
+        <i class="ri-linkedin-fill p-2"></i>
+        <i class="ri-twitter-x-fill p-2"></i>
+      </div>
+      <div class="text-center pb-16 p-5">Copyright © Aptech Computer Education Ota 2024 All Rights Reserved.</div>
+    </footer>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+  </body>
+</html>
